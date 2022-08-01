@@ -1,13 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✅✅✅: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    return console.log(`🛑🛑🛑: ${actual} !== ${expected}`);
-  }
-};
-
-// Fresh code beings here
-
 // scan the object and return the first key which contains the given value
 // If no key with that given value is found, then it should return undefined
 const findKeyByValue = (object, value) => {
@@ -22,14 +12,16 @@ const findKeyByValue = (object, value) => {
   }
   
   return result;
-}
-
-// sample list
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;
+
+// sample list
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire"
+// };
+
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

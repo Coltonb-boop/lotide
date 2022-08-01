@@ -1,21 +1,3 @@
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    return console.log(`✅✅✅: ${actual} === ${expected}`);
-  } 
-  return console.log(`🛑🛑🛑: ${actual} !== ${expected}`);
-};
-
-const eqArrays = (first, second) => {
-  for (let i = 0; i < first.length; i++) {
-    if (first[i] !== second[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// Fresh code begins here
-
 const letterPositions = (sentenceToIndex) => {
   const result = {};
   // logic to update results here
@@ -28,8 +10,10 @@ const letterPositions = (sentenceToIndex) => {
   }
   
   return result;
-}
+};
 
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2, 3]);
-assertArraysEqual(letterPositions("lighthouse").h, [3, 5]);
+module.exports = letterPositions;
+
+// assertArraysEqual(letterPositions("hello").e, [1]);
+// assertArraysEqual(letterPositions("hello").l, [2, 3]);
+// assertArraysEqual(letterPositions("lighthouse").h, [3, 5]);

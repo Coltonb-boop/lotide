@@ -6,7 +6,7 @@ const assertObjectsEqual = (actual, expected) => {
     return console.log(`✅✅✅: ${inspect(actual)} === ${inspect(expected)}`);
   }
   return console.log(`🛑🛑🛑: ${inspect(actual)} !== ${inspect(expected)}`);
-}
+};
 
 module.exports = assertObjectsEqual;
 

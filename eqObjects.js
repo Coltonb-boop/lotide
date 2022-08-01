@@ -1,19 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✅✅✅: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    return console.log(`🛑🛑🛑: ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = (first, second) => {
-  for (let i = 0; i < first.length; i++) {
-    if (first[i] !== second[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 // Fresh code beings here
 // Returns true if both objects have identical keys with identical values.
