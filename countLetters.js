@@ -22,6 +22,6 @@ const countLetters = (sentenceToCount) => {
   console.log(output);
   // return our blank object
   return output;
-}
+};
 
 countLetters('lighthouse in the house');

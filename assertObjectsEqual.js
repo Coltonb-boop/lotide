@@ -25,15 +25,15 @@ const eqObjects = (object1, object2) => {
   }
 
   return result;
-}
+};
 
 const assertObjectsEqual = (actual, expected) => {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     return console.log(`✅✅✅: ${inspect(actual)} === ${inspect(expected)}`);
-  } 
+  }
   return console.log(`🛑🛑🛑: ${inspect(actual)} !== ${inspect(expected)}`);
-}
+};
 
 
 // Test code

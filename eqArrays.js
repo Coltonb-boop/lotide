@@ -8,14 +8,13 @@ const eqArrays = (first, second) => {
       if (!eqArrays(first[i], second[i])) {
         return false;
       }
-    }
+    } else if (first[i] !== second[i]) {
     // check if elements of equal index are equal
-    else if (first[i] !== second[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
 
 module.exports = eqArrays;

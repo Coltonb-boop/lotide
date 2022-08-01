@@ -31,7 +31,7 @@ const eqObjects = (object1, object2) => {
     // check if this is contains a nested object (and not an array)
     if (typeof object1[key] === 'object' && !Array.isArray(object1[key]) && object1[key] !== null && typeof object2[key] === 'object' && !Array.isArray(object2[key]) && object2[key] !== null) {
       return eqObjects(object1[key], object2[key]);
-    } 
+    }
 
     // check if is an array
     if (Array.isArray(object1[key])) {
@@ -39,16 +39,15 @@ const eqObjects = (object1, object2) => {
       if (!eqArrays(object1[key], object2[key]) || object1[key].length !== object2[key].length) {
         return false;
       }
-    } 
-    // if neither object nor array, must be primitive
-    else if (object1[key] !== object2[key]) {
+    } else if (object1[key] !== object2[key]) {
+      // if neither object nor array, must be primitive
       return false;
     }
   }
 
   // return default true after
   return result;
-}
+};
 
 
 
@@ -69,7 +68,7 @@ const eqObjects = (object1, object2) => {
 // const cd2 = { c: "1", d: ["2", 3, 4] };
 // assertEqual(eqObjects(cd, cd2), false); // => false
 
-assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true) // => true
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
 
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false) // => false
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false) // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false

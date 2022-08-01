@@ -1,7 +1,7 @@
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     return console.log(`✅✅✅: ${actual} === ${expected}`);
-  } 
+  }
   return console.log(`🛑🛑🛑: ${actual} !== ${expected}`);
 };
 
@@ -26,7 +26,7 @@ const map = (array, callback) => {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEqual(map(words, word => word), ["ground", "control", "to", "major", "tom"]);

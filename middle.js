@@ -10,6 +10,6 @@ const middle = (array) => {
   }
   output.push(array[arrayMiddle]);
   return output;
-}
+};
 
 module.exports = middle;
