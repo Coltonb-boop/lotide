@@ -1,13 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✅✅✅: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    return console.log(`🛑🛑🛑: ${actual} !== ${expected}`);
-  }
-};
-
-
-
 const countLetters = (sentenceToCount) => {
   // create blank object to store return
   let output = {};
@@ -19,9 +9,11 @@ const countLetters = (sentenceToCount) => {
     // could also split(' ').join('') to get a similar affect
     !output[letter] ? output[letter] = 1 : output[letter]++;
   }
-  console.log(output);
+  // console.log(output);
   // return our blank object
   return output;
 };
 
-countLetters('lighthouse in the house');
+module.exports = countLetters;
+
+// countLetters('lighthouse in the house');
